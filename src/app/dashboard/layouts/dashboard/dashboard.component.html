@@ -1,1 +1,11 @@
-<p>dashboard works!</p>
+<h1>Dashboard</h1>
+<hr>
+<h3>User</h3>
+<pre>{{ infoUsuario() | json}} </pre>
+<br>
+<span routerLink="/Auth/auth/login">Regresar al login</span>
+<br>
+<br>
+<button (click)="onLogout()">
+  Cerrar sesión
+</button>
