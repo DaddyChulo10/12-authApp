@@ -3,6 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './layouts/dashboard/dashboard.component';
+import { PrimeModule } from '../prime/prime.module';
+
+
+// import { PrimeModule } from '../prime/prime.module';
+// import { ButtonModule } from 'primeng/button';
+// import { RippleModule } from 'primeng/ripple';
 
 
 @NgModule({
@@ -11,7 +17,11 @@ import { DashboardComponent } from './layouts/dashboard/dashboard.component';
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    PrimeModule,
+    // PrimeModule,
+    // ButtonModule,
+    // RippleModule
   ]
 })
 export class DashboardModule { }
