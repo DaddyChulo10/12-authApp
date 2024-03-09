@@ -1,1 +1,45 @@
-<p>register-page works!</p>
+<form class="login100-form" autocomplete="off"  [formGroup]="myForm" (ngSubmit)="crearCuenta()">
+
+  <span class="login100-form-title p-b-49">
+    Crear una cuenta
+  </span>
+
+  <div class="wrap-input100 m-b-23">
+    <span class="label-input100">Nombre</span>
+    <input class="input100" type="text" placeholder="Nombre completo" formControlName="name">
+    <span class="focus-input100"></span>
+  </div>
+
+  <div class="wrap-input100">
+    <span class="label-input100">Email</span>
+    <input class="input100" type="email" placeholder="Ingrese su correo electrónico" formControlName="email">
+    <span class="focus-input100"></span>
+  </div>
+
+  <div class="wrap-input100">
+    <span class="label-input100">Contraseña</span>
+    <input class="input100" type="password" placeholder="Ingrese su contraseña" formControlName="password">
+    <span class="focus-input100"></span>
+  </div>
+
+  <div class="text-right p-t-8 p-b-31"></div>
+
+  <div class="container-login100-form-btn">
+    <div class="wrap-login100-form-btn">
+      <div class="login100-form-bgbtn"></div>
+      <button class="login100-form-btn" type="submit" [disabled]="myForm.invalid"> <!--  -->
+        Crear Cuenta
+      </button>
+    </div>
+  </div>
+
+  <div class="flex-col-c p-t-60">
+    <span class="txt1 p-b-17">
+        ¿Ya cuentas con una cuenta?
+    </span>
+
+    <a routerLink="/Auth/auth/auth" class="txt2">
+      Inicia Sesión aqui
+    </a>
+  </div>
+</form>
