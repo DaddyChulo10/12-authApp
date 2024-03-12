@@ -16,7 +16,7 @@ export class DashboardComponent implements OnInit {
 
   private authService = inject(AuthService)
   public infoUsuario = computed(() => this.authService.currentUser())
-  // private router = inject(Router)
+  private router = inject(Router)
   private infoUsers = inject(UsersService)
 
   public items: MenuItem[] | undefined;
@@ -45,7 +45,7 @@ export class DashboardComponent implements OnInit {
 
   onLogout() {
     this.authService.logout()
-    // this.router.navigateByUrl('Auth/auth/login')
+    this.router.navigateByUrl('Auth/auth/login')
   }
 
 

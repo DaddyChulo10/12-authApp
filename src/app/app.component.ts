@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
         this.router.navigateByUrl('/Dashboard/dashboard')
         return
       case AuthStatus.notAuthenticated:
-        this.router.navigateByUrl('/Auth/auth/register')
+        this.router.navigateByUrl('/Auth/auth/login')
 
     }
 

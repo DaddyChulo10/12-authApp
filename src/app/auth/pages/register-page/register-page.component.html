@@ -1,4 +1,4 @@
-<form class="login100-form" autocomplete="off"  [formGroup]="myForm" (ngSubmit)="crearCuenta()">
+<form class="login100-form" autocomplete="off" [formGroup]="myForm" (ngSubmit)="crearCuenta()">
 
   <span class="login100-form-title p-b-49">
     Crear una cuenta
@@ -32,10 +32,15 @@
       </button>
     </div>
   </div>
+  <div class="flex-col-c p-t-1" *ngIf="this.mensaje != null">
+    <span class="txt1 p-b-17 rojo">
+      {{this.mensaje}}
+    </span>
+  </div>
 
   <div class="flex-col-c p-t-60">
     <span class="txt1 p-b-17">
-        ¿Ya cuentas con una cuenta?
+      ¿Ya cuentas con una cuenta?
     </span>
 
     <a routerLink="/Auth/auth/auth" class="txt2">
